@@ -1,34 +1,24 @@
-import './App.css';
-import Employee from './components/Employee';
-
-
-const user = {
-  firstname : 'Amu',
-  lastname : 'Nnamdi'
-};
-
-function formatName(user) {
-  return user.firstname + " " + user.lastname;
-}
-
-const emp_check = false;
+import "./App.css";
+import Employee from "./components/Employee";
+import Intern from "./components/Intern";
+import { useState } from "react";
 
 function App() {
+  const [role, setRole] = useState("role?");
+
   return (
     <div className="App">
-      <h1> Hey, {formatName(user)}! </h1>
-      { emp_check ? 
-      ( 
-            <>
-            <Employee/>
-            <Employee/>
-            <Employee/>
-            <Employee/>
-            <Employee/>
-          </>
-    ) : (
-      <p> You cannot see the employees </p>
-    )}
+      <>
+        <input
+          type="text"
+          placeholder=""
+          onKeyDown={(e) => setRole(e.target.value)}
+        />
+        <Employee name="Caleb" role="Dev" />
+        <Employee name="Susan" role={role} />
+      </>
+
+      <Intern intern_name="Christian" intern_age="42" />
     </div>
   );
 }
