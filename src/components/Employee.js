@@ -1,16 +1,29 @@
+import EditEmployee from "./EditEmployee";
+
+
 function Employee(props) {
 
+
   return (
-    <>
-      <h2> Hey, Employee {props.name} </h2>
-      <h3> Hey, Employee {props.detail_name},  {props.detail_age} </h3>
-      {props.role ? (
-        <p > {props.role} </p>
-      ) : (
-        <p > No role </p>
-      )}
-    </>
-  );
+  
+    <div className="m-2 py-8 px-8 max-w-sm bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+      <img
+        class="object-cover w-[100px] h-[100px] block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0"
+        src={props.image}
+        alt="Woman's Face"
+      />
+
+
+      <div className="text-center space-y-2 sm:text-left">
+        <div className="space-y-0.5">
+          <p  className="text-lg text-black font-semibold">{props.name}</p>
+          <p  className="text-slate-500 font-medium">{props.role}</p>
+        </div>
+      </div>
+      <EditEmployee name = {props.name} role = {props.role} />
+      
+    </div>
+  )
 }
 
 export default Employee;
