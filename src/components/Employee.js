@@ -1,4 +1,4 @@
-import EditEmployee from "./EditEmployee";
+// import EditEmployee from "./EditEmployee";
 
 function Employee(props) {
   return (
@@ -15,13 +15,7 @@ function Employee(props) {
           <p className="text-slate-500 font-medium">{props.role}</p>
         </div>
       </div>
-      <EditEmployee
-        id = {props.id}
-        updateEmployee={props.updateEmployee}
-        name={props.name}
-        role={props.role}
-        image ={props.image}
-      />
+     {props.editemployee}
     </div>
   );
 }
