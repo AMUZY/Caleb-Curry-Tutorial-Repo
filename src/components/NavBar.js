@@ -11,7 +11,7 @@ import { v4 as uuidv4 } from "uuid";
 const navigation = [
   { name: "Employees", href: "/Employees" },
   { name: "About", href: "/About" },
-  { name: "Projects", href: "/other" },
+  { name: "Dictionary", href: "/Dictionary" },
   { name: "Calendar", href: "/Other2" },
 ];
 
