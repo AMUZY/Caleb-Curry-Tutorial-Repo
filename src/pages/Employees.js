@@ -73,8 +73,8 @@ function Employees() {
 
   
   return (
-    <div className="App bg-gray-200 min-h-screen">
-      <div className="flex flex-wrap justify-center">
+    <>
+      <div className="flex flex-wrap justify-center mt-3">
         {Employees.map((employee) => {
           const editemployee = (
             <EditEmployee
@@ -99,7 +99,7 @@ function Employees() {
         })}
       </div>
       <AddEmployee Add={Add} />
-    </div>
+    </> 
   );
 }
 
